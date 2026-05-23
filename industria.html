@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indústria 4.0 | AGV Logístico e Automação Industrial - AUTSISTEM Curitiba</title>
+
+    <meta name="description" content="Soluções em Indústria 4.0 com AGV logístico (venda e locação), automação industrial e sistemas inteligentes.">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #00E5FF;
+            --dark: #111111;
+            --gray: #F4F4F4;
+            --text: #333333;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--dark);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20.8px;
+            color: #fff;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        nav li { margin-left: 20px; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 9.6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .btn-home-nav { background: var(--accent); color: var(--dark) !important; padding: 8px 15px; border-radius: 4px; }
+        nav a:hover { color: var(--accent); }
+
+        /* Botão Mobile */
+        .mobile-menu-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1100;
+        }
+        .mobile-menu-icon span {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            background: var(--dark);
+            color: #fff;
+            padding: 180px 0 100px;
+            text-align: left;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.6rem;
+            line-height: 1;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p {
+            font-size: 0.96rem;
+            max-width: 650px;
+            margin: 30px 0;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        /* --- GRID SECTIONS --- */
+        .about-grid-section {
+            padding: 120px 0;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .image-mosaic {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 20px;
+        }
+        .img-card {
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .stat-card {
+            background: var(--accent);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark);
+            text-align: center;
+        }
+        .stat-card h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            line-height: 1;
+        }
+        .stat-card p {
+            font-weight: 800;
+            margin: 0;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .img-vertical { grid-row: 1 / span 2; }
+        .img-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: 0.5s ease; }
+        .img-card:hover img { transform: scale(1.05); }
+
+        .text-content .sub-label {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            color: #888;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .text-content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin: 0 0 25px 0;
+            color: var(--dark);
+            text-transform: uppercase;
+        }
+        .text-content p {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .software-section {
+            padding: 100px 0;
+            background: var(--gray);
+        }
+        .software-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .software-image {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 20px 20px 0px var(--accent);
+        }
+        .software-image img { width: 100%; display: block; transition: opacity 0.5s ease-in-out; }
+
+        .product-detail-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        .product-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .spec-item {
+            background: var(--gray);
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+        .spec-item:hover { border-color: var(--accent); background: #fff; }
+        .spec-item img { width: 45px; height: 45px; margin-bottom: 15px; }
+        .spec-item p { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; margin: 0; color: var(--dark); }
+
+        .product-video-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        /* Ajuste para o vídeo ocupar todo o espaço do box */
+        .product-video-box video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0; object-fit: cover;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+        footer {
+            background: var(--dark);
+            color: #666;
+            padding: 60px 0;
+            text-align: center;
+            font-size: 10.4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 1000px) {
+            .mobile-menu-icon { display: flex; }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark);
+                padding: 20px 0;
+                z-index: 999;
+                border-bottom: 2px solid var(--accent);
+            }
+            nav.active { display: block !important; }
+            nav ul { flex-direction: column; }
+            nav li { margin: 10px 0; width: 100%; text-align: center; }
+            nav a { font-size: 12px; display: inline-block; }
+
+            .about-grid-section, .software-container, .product-container { 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+                gap: 40px;
+            }
+            .hero h1 { font-size: 2.4rem; }
+            .text-content h2 { font-size: 2.24rem; }
+            .software-image, .product-video-box { order: -1; margin-bottom: 40px; }
+            .image-mosaic { max-width: 500px; margin: 0 auto 40px; }
+            
+            .specs-grid { grid-template-columns: 1fr; }
+            
+            ul { text-align: center !important; }
+            li { justify-content: center !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">AUTSISTEM</a>
+            
+            <button class="mobile-menu-icon" id="mobile-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="btn-home-nav">Home</a></li>
+                    <li><a href="manutencao.html">Manutenção</a></li>
+                    <li><a href="compras.html">Compras Fácil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p style="font-size: 0.8rem; letter-spacing: 2px;">SISTEMAS INTELIGENTES & CONECTADOS</p>
+            <h1>INDÚSTRIA 4.0: <span>TRANSFORME</span><br>SUA OPERAÇÃO.</h1>
+            <p>Implementamos tecnologias de ponta com inteligência: AGVs logísticos, automação industrial e sistemas conectados para levar sua fábrica ao próximo nível.</p>
+        </div>
+    </section>
+
+    <section class="about-grid-section">
+        <div class="image-mosaic">
+            <div class="img-card stat-card">
+                <h2>AGV+</h2>
+                <p>Dedicado, Locação, Kit Pronto</p>
+            </div>
+            <div class="img-card img-vertical">
+                <img src="img/agv-kit2.png" alt="AGV Híbrido Logistico" loading="lazy">
+            </div>
+            <div class="img-card">
+                <img src="img/agv-kit.png" alt="AGV KIT Autsistem" loading="lazy">
+            </div>
+        </div>
+
+        <div class="text-content">
+            <span class="sub-label">Construindo Eficiência</span>
+            <h2>O Futuro da Movimentação é Inteligente</h2>
+            <p>
+                Nossos AGVs são desenvolvidos nacionalmente com inteligência de ponta e rigorosamente adequados às normas de segurança. Unimos processos inteligentes para transformar sua visão em realidade física.
+            </p>
+        </div>
+    </section>
+
+    <section class="software-section">
+        <div class="software-container">
+            <div class="text-content">
+                <span class="sub-label">Tecnologia em Movimento</span>
+                <h2>VENDAS & LOCAÇÃO</h2>
+                <p>
+                    Ampla gama de veiculos guiados atendendo a  necessidade de cada operação. Trabalhamos com venda e locação de AGV logístico industrial, com foco em melhor custo-benefício.
+                </p>
+                <ul style="list-style: none; padding: 0; font-weight: 700; color: var(--dark); text-align: left; font-size: 0.88rem;">
+                    <li>● Carregamento Manual / Automático</li>
+                    <li>● Melhor custo-benefício do mercado</li>
+                    <li>● Suporte e manutenção inclusos</li>
+                </ul>
+            </div>
+            <div class="software-image">
+                <img id="agv-hibrido-img" src="img/agv-hibrido.png" alt="AGV Híbrido em operação" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="product-detail-section">
+        <div class="product-container">                        
+            <div class="product-info">
+                <div class="text-content">
+                    <span class="sub-label">Equipamento de Ponta</span>
+                    <h2 style="font-size: 3.2rem;">AGV <span>Híbrido</span></h2>
+                </div>
+                <p style="color: #666; font-size: 0.88rem;">
+                    AGV desenvolvido para uma montadora de maquinas agricolas, design modular que garante máxima estabilidade e precisão capacidade de arraste e 2000Kg , velocidade de 3km com ssitema de acoplamento automatico e direção guiada magnetica.
+                </p>
+
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <img src="https://www.asseco-ceit.com/wp-content/uploads/2025/01/Asseco_ceit_agv_charging_underrun_contact-1.webp" alt="Resistência térmica">
+                        <p>Resistência Térmica<br>-20°C a +50°C</p>
+                    </div>
+                    <div class="spec-item">
+                        <img src="https://www.asseco-ceit.com/wp-content/uploads/2025/01/Asseco_ceit_agv_safety_360-1.webp" alt="VDA 5050">
+                        <p>Protocolo VDA 5050<br>Comunicação aberta</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-video-box">
+                <video controls loading="lazy">
+                    <source src="C:\Users\AVILAAndre\OneDrive - Horse\Área de Trabalho\SITE02\video\video agv funcionamento.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>    
+    </section>
+
+    <section class="software-section" style="background-color: #ffffff; padding: 120px 0; border-top: 1px solid #eee;">
+        <div class="software-container">
+            <div class="text-content">
+                <span class="sub-label">Kit MONTAGEM AGV</span>
+                <h2 style="font-size: 4rem; margin-bottom: 20px;">PLUG AND PLAY</h2>
+                <p style="max-width: 520px; color: #555; margin-bottom: 30px;">
+                    Fornecemos Kit plug and play dedicados e com a possibilidade de projetos dedicados.
+                    Sistema desenvolvido especialmente para empresa que necessitam algo robusto de baixo custo e montagem simples .
+                </p>
+                <ul style="list-style: none; padding: 0; font-weight: 700; color: var(--dark); text-align: left; font-size: 1rem; line-height: 2.2;">
+                    <li style="display: flex; align-items: center; gap: 10px;">● Suporte Tecnico Montagem </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">● Melhor custo-benefício do mercado</li>
+                    <li style="display: flex; align-items: center; gap: 10px;">● Plug And Play </li>
+                </ul>
+            </div>
+            
+            <div style="position: relative; padding: 20px;">
+                <div style="background: #fff; border-radius: 30px; padding: 10px; box-shadow: 0 40px 80px rgba(0,0,0,0.06); border-bottom: 15px solid var(--accent); overflow: hidden;">
+                    <img src="img/kit-agv.png" alt="Componentes do Kit AGV" style="width: 100%; display: block; transform: scale(1.05);">
+                </div>
+                <div style="position: absolute; top: 40px; right: 0; width: 40px; height: 80%; background: var(--accent); z-index: -1; border-radius: 0 30px 30px 0; opacity: 0.8;"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 AUTSISTEM - SOLUÇÕES INDUSTRIAIS AVANÇADAS | CURITIBA - PR
+    </footer>
+
+    <a href="https://wa.me/5541999781985" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Menu Mobile Lógica
+        const btnMobile = document.getElementById('mobile-btn');
+        const nav = document.getElementById('nav-menu');
+
+        btnMobile.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Fecha o menu ao clicar em links
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Lógica de Troca de Imagens do AGV
+        const imagensAgv = [
+            "img/agv-hibrido.png",
+            "img/agv-hibrido2.png",
+            "img/agv-hibrido3.png",
+            "img/agv-hibrido4.png",
+            "img/agv-hibrido5.png",
+            "img/agv-hibrido6.png"
+        ];
+        
+        let indexAtual = 0;
+        const imgElemento = document.getElementById('agv-hibrido-img');
+
+        function alternarImagem() {
+            indexAtual = (indexAtual + 1) % imagensAgv.length;
+            
+            imgElemento.style.opacity = 0;
+            
+            setTimeout(() => {
+                imgElemento.src = imagensAgv[indexAtual];
+                imgElemento.style.opacity = 1;
+            }, 500);
+        }
+
+        setInterval(alternarImagem, 3000);
+    </script>
+
+</body>
+</html>
